@@ -19,9 +19,15 @@ body{
     height: calc(55% - 5px);
 }
 
+img{
+    width: 100%;
+    display: block; /* Per fixare i 4 pixel di default dell'inline block */
+}
+
+
+
 /* HEADER */
 header {
-    border-bottom: 1px solid blue ;
     height: 60px;
     display: flex;
     justify-content: flex-end;
@@ -36,7 +42,7 @@ header .box{
 header span{
     margin-left: 5px; 
     position: relative;
-    bottom: 1px; 
+    bottom: 0.5px; 
 }
 
 /* MAIN */
@@ -48,11 +54,33 @@ main{
 
 .main-wrapper{
     width: calc(100% - 190px);
-    height: 200px;
     margin: auto;
     overflow-y: auto;
     height: 100%;
+    position: relative;
+    right: 3px; /* perché ho dato un margin-left di 3px alle img-box */
 }
+
+/* Uso questo div per far prendere alle immagini il 100% del main-wrapper meno la scrollbar */
+.scrollbar-fix{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.img-box{
+    width: calc((100% / 7) - 3px);
+    margin: 0 0 9px 3px;
+    position: relative;
+}
+
+.call-overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 /* FOOTER */
 footer{
@@ -62,6 +90,10 @@ footer{
 
 
 /* TEST */
-div:not(.box){
+ /* div:not(.box){
     border: 1px solid blue;
-}
+}  */
+
+
+
+
