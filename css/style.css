@@ -86,8 +86,46 @@ main{
 footer{
     height: 95px;
     background-color: #222222;
+    display: flex;
+    justify-content: space-between;
 }
 
+footer > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.footer-icon-box{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon-box i{
+    margin-bottom: 5px;
+}
+
+.lime-icon-box i{
+    color: #4bc800;
+}
+
+.left-footer{
+    width: 9%;
+}
+
+.middle-footer{
+    width: 35%;
+}
+
+.right-footer{
+    width: 5%;
+    background-color: #4a4a4a;
+    color: red;
+    justify-content: center;
+}
 
 /* TEST */
  /* div:not(.box){
