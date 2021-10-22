@@ -17,6 +17,7 @@ body{
     align-items: center;
     padding: 0 10px;
     height: calc(55% - 5px);
+    cursor: pointer;
 }
 
 img{
@@ -63,6 +64,7 @@ main{
 
 /* Uso questo div per far prendere alle immagini il 100% del main-wrapper meno la scrollbar */
 .scrollbar-fix{
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -97,6 +99,10 @@ footer > div{
     padding: 0 10px;
 }
 
+footer > div > *{
+    cursor: pointer;
+}
+
 .footer-icon-box{
     display: flex;
     flex-flow: column nowrap;
@@ -125,6 +131,7 @@ footer > div{
     background-color: #4a4a4a;
     color: red;
     justify-content: center;
+    cursor: pointer;
 }
 
 
